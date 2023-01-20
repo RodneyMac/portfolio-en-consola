@@ -1,17 +1,18 @@
 :root {
-  --gray: #626963;
-  --background: #272a36;
+  --background: #2c2c32;
+  --terminal: #25252b;
   --header: #4a4a4a;
   --text: #f5f3f1;
-  --title: #eeb7eb;
-  --command: #68ff99;
-  --error: #ff8383;
+  --title: #119cb6;
+  --command: #32c47d;
+  --error: #c42e2e;
+  --date: #e9d84f;
 }
 
 body {
   display: grid;
   place-items: center;
-  background-color: var(--gray);
+  background-color: var(--background);
   color: var(--text);
   font-family: "Space Mono", monospace;
   font-size: 14;
@@ -22,16 +23,28 @@ main {
   height: 550px;
   width: 550px;
   max-width: 550px;
+  margin-bottom: 50px;
 }
 
 .terminal {
-  background-color: var(--background);
+  background-color: var(--terminal);
   color: var(--text);
   padding: 20px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   overflow: scroll;
   height: 100%;
+}
+
+.terminal::-webkit-scrollbar {
+  width: 8px;
+  height: 100%;
+  cursor: pointer;
+}
+
+.terminal::-webkit-scrollbar-thumb {
+  background-color: var(--header);
+  border-radius: 50px;
 }
 
 .terminal div {
@@ -57,7 +70,7 @@ main {
 }
 
 input {
-  background-color: var(--background);
+  background-color: var(--terminal);
   color: var(--text);
   font-size: 14px;
   font-family: "Space Mono", monospace;
@@ -69,8 +82,7 @@ input:focus {
 }
 
 .sectionTitle {
-  font-size: 24px;
-  font-weight: 600;
+  color: var(--title);
 }
 
 .title {
@@ -78,18 +90,30 @@ input:focus {
   font-weight: 600;
 }
 
+.pointer {
+  color: var(--title);
+}
+
+.date {
+  color: var(--date);
+}
+
 .error {
   color: var(--error);
-  font-weight: 600;
 }
 
 .command {
   color: var(--command);
-  font-weight: 600;
+  font-size: 16px;
 }
 
 .indent {
   margin-left: 5px;
+  font-size: 14px;
+}
+
+a {
+  color: var(--text);
 }
 
 .hidden {

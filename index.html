@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Rodney Maciel</title>
     <link rel="stylesheet" href="style.css" />
-    <!-- Font Space Mono -->
+    <link rel="icon" href="https://res.cloudinary.com/de1xrxlcz/image/upload/v1674189297/guitars/Rod-logo/rod_rgoxff.png"/>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,43 +20,35 @@
       <div class="terminal" id="terminalWindow">
         <section id="terminal">
           <div class="command">
-            Successful login - <span class="error" id="date"></span>
-            <div class="title">Mi Portfolio</div>
-            Hola! Bienvenidos a mi portfolio, para ver la lista de comandos
-            ingresa <span class="command">help</span>
+            Successful login - <span class="date" id="date"></span>
           </div>
+          <div class="sectionTitle">Mi Portfolio</div>
+          Hola! Bienvenidos a mi portfolio, para ver la lista de comandos
+          ingresa <span class="command">start</span>
         </section>
         <div class="prompt">
           <span class="command">$</span>
-          <span class="title">gestuser</span><input id="promptInput" />
+          <span class="pointer">write</span><input id="promptInput" />
         </div>
       </div>
     </main>
     <div class="hidden" id="promptClone">
-      <span class="command">$</span> <span class="title">gestuser</span>
+      <span class="command">$</span> <span class="sectionTitle">write</span>
       <span class="promptCloneInput"></span>
       <div class="promptCloneContent"></div>
     </div>
-    <div class="hidden" id="help">
+    <div class="hidden" id="start">
       <div class="sectionTitle">
         Puedes ingresar cualquiera de estos comandos:
       </div>
       <div class="indent">
         <div>
-          <span class="command">about</span>
-          <div class="indent">Sobre mi</div>
-        </div>
-        <div>
-          <span class="command">social</span>
-          <div class="indent">Listado de mis redes sociales</div>
+          <span class="command">education</span>
+          <div class="indent">Todo sobre mi formación</div>
         </div>
         <div>
           <span class="command">skills</span>
           <div class="indent">Las herramientas con las que trabajo</div>
-        </div>
-        <div>
-          <span class="command">education</span>
-          <div class="indent">Todo sobre mi formación</div>
         </div>
         <div>
           <span class="command">experience</span>
@@ -67,30 +59,30 @@
           <div class="indent">Listado de mis proyectos</div>
         </div>
         <div>
+          <span class="command">social</span>
+          <div class="indent">Listado de mis redes sociales</div>
+        </div>
+        <div>
           <span class="command">clear</span>
           <div class="indent">Borrar historial de la terminal</div>
         </div>
       </div>
     </div>
-    <div class="hidden" id="projects">
-      <div class="sectionTitle">Proyectos:</div>
+    <div class="education hidden" id="education">
+      <div class="sectionTitle">Formación:</div>
       <div class="indent">
-        <span class="title">Proyecto 1</span> -
-        <a href="https://github.com/RodneyMac" target="_blank"
-          >Link a repositorio</a
-        >
+        <span class="title">Sistemas Informáticos - Universidad</span>
+        <span class="">Finalizado 2022</span>
+        <div class="indent">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, facere!
+        </div>
       </div>
       <div class="indent">
-        <span class="title">Proyecto 2</span> -
-        <a href="https://github.com/RodneyMac" target="_blank"
-          >Link a repositorio</a
-        >
-      </div>
-      <div class="indent">
-        <span class="title">Proyecto 3</span> -
-        <a href="https://github.com/RodneyMac" target="_blank"
-          >Link a repositorio</a
-        >
+        <span class="title">Curso FullStack - Online</span>
+        <span class="">Finalizado 2020</span>
+        <div class="indent">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, facere!
+        </div>
       </div>
     </div>
     <div class="hidden" id="skills">
@@ -114,14 +106,6 @@
         </div>
       </div>
     </div>
-    <div class="hidden" id="about">
-      <div class="sectionTitle">Sobre mi:</div>
-      <div class="indent">
-        Hola! mi nombre es <span class="command">Nombre y Apellido</span>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe,
-        voluptatem?
-      </div>
-    </div>
     <div class="hidden" id="experience">
       <div class="sectionTitle">Experiencia:</div>
       <div class="indent">
@@ -141,34 +125,33 @@
         </div>
       </div>
     </div>
-    <div class="hidden" id="social">
-      <div class="sectionTitle">Redes Sociales:</div>
+    <div class="hidden" id="projects">
+      <div class="sectionTitle">Proyectos:</div>
       <div class="indent">
-        <span class="title">Github</span> -
-        <span class="command">https://github.com/RodneyMac</span>
+        <span class="command">Guitar Store</span> -
+        <a href=" https://guitar-store-mauve.vercel.app/" target="_blank"
+          >https://guitar-store-mauve.vercel.app/</a
+        >
       </div>
       <div class="indent">
-        <span class="title">LinkedIn</span> -
-        <span class="command"
-          >https://www.linkedin.com/in/rodney-maciel-160016154/</span
+        <span class="command">Pizzeria Don Remolo</span> -
+        <a href=" http://donremolo.site/" target="_blank"></a>
+          http://donremolo.site/</a
         >
       </div>
     </div>
-    <div class="education hidden" id="education">
-      <div class="sectionTitle">Formación:</div>
+    <div class="hidden" id="social">
+      <div class="sectionTitle">Redes Sociales:</div>
       <div class="indent">
-        <span class="title">Sistemas Informáticos - Universidad</span>
-        <span class="">Finalizado 2022</span>
-        <div class="indent">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, facere!
-        </div>
+        <span class="command">Github</span> -
+        <!-- <span class="command">https://github.com/RodneyMac</span> -->
+        <a href="https://github.com/RodneyMac" target="_blank">https://github.com/RodneyMac</a>
       </div>
       <div class="indent">
-        <span class="title">Curso FullStack - Online</span>
-        <span class="">Finalizado 2020</span>
-        <div class="indent">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, facere!
-        </div>
+        <span class="command">LinkedIn</span> -
+        <a href="https://www.linkedin.com/in/rodney-maciel-160016154/" target="_blank"
+          >https://www.linkedin.com/in/rodney-maciel-160016154/</a
+        >
       </div>
     </div>
 
