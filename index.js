@@ -17,6 +17,10 @@ promptInput.addEventListener("keydown", (e) => {
   }
 });
 
+promptInput.addEventListener("click", (e) => {
+  e.preventDefault();
+});
+
 const enterCommand = (e) => {
   const promptElement = document.getElementById("promptClone").cloneNode(true);
   promptElement.classList.remove("hidden");
