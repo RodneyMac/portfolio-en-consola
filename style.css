@@ -81,6 +81,10 @@ input:focus {
   outline: none;
 }
 
+.prompt:focus #promptInput:focus {
+  background: transparent;
+}
+
 .sectionTitle {
   color: var(--title);
 }

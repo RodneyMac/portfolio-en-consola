@@ -11,6 +11,10 @@ promptInput.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
     enterCommand(e);
   }
+
+  if (e.key === "ArrowUp" || e.key === "ArrowDown") {
+    e.preventDefault();
+  }
 });
 
 const enterCommand = (e) => {
@@ -31,11 +35,11 @@ const selectCommandBlock = (command) => {
   const lowerCommand = command.toLowerCase();
   switch (lowerCommand) {
     case "start":
-    case "social":
-    case "skills":
     case "education":
+    case "skills":
     case "experience":
     case "projects":
+    case "contact":
       return getCommandTemplate(lowerCommand);
     case "clear":
       return clearCommand();
